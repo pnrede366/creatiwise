@@ -158,6 +158,10 @@
             border: 1px solid rgb(0, 165, 27);
         }
         
+        #searchbar {
+            width: 25%;
+        }
+        
         @media (max-width:1405px) {
             body {
                 font-size: 16px;
@@ -188,6 +192,9 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
+            #searchbar {
+                width: 35%;
+            }
         }
         
         @media (max-width:768px) {
@@ -217,6 +224,15 @@
             }
             .main_left_list_2 {
                 display: inline-block;
+            }
+        }
+        
+        @media (max-width:562px) {
+            #addshedule {
+                flex-direction: column;
+            }
+            #searchbar {
+                width: 70%;
             }
         }
         
@@ -306,10 +322,10 @@
                 </div>
             </nav>
             <br>
-            <section class="d-flex justify-content-between align-items-center">
+            <section class="d-flex justify-content-between align-items-center  flex-md-row" id="addshedule">
                 <a href="" class="shedule_btn px-3 py-2 m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
                     New Shedule</a>
-                <input type="search" class="mx-5 form-control w-25" placeholder="&#xf002 Search your shedule" id="searchbar">
+                <input type="search" class="mx-5 form-control " placeholder="&#xf002 Search your shedule" id="searchbar">
             </section>
             <br>
 
@@ -430,17 +446,17 @@
                                         aria-controls="flush-collapseOne_${i}"
                                         >
                                         - <section class="task_modify  p-3 m-3" id="arrow_up">
-                                        <div class="d-flex  justify-content-between">
+                                        <div class="d-flex  justify-content-between shedule_name">
                                             <div>${fetchtask[i].shedulename}
                                                 <div style="color: gray;">${fetchtask[i].weeks} weeks| 12 Sessions</div>
                                                 </div>
                                                 
                                                 
-                                                <div class="d-flex">
+                                                <div class="d-flex icons">
                                                     <div> <i class="fa fa-pencil fa-2x" aria-hidden="true"
                                                         style="color: gray;"></i>
                                                         </div>
-                                                        <div> <i class="fa fa-trash text-danger px-2 fa-2x" aria-hidden="true" onclick="deleteData(${i})"></i>
+                                                        <div> <i class="fa fa-trash text-danger px-2 fa-2x" aria-hidden="true" onclick=""></i>
                                                             </div>
                                                                     
                                                             </div>
