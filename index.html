@@ -153,9 +153,9 @@
             box-shadow: 0px 0px 1px gray;
         }
         
-        input:focus {
-            border: 1px solid blueviolet;
-            box-shadow: none;
+        input[type="radio"]:checked {
+            color: rgb(0, 155, 21);
+            border: 1px solid rgb(0, 165, 27);
         }
         
         @media (max-width:1405px) {
@@ -236,7 +236,7 @@
                         <i class="fa fa-bars test-light fa-4x mt-2" aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="main_left_list justify-content-around">
+                <div class="main_left_list justify-content-around none">
                     <div class="main_left_list_item_2 mx-3  my-4"><i class="m-2 fa fa-pie-chart" aria-hidden="true"></i>Dashboard
                     </div>
                     <div class="main_left_list_item mx-3  my-4"><i class="m-2 fa fa-file-text" aria-hidden="true"></i> Tactics Vault</div>
@@ -292,13 +292,14 @@
         </section>
         <section class="main_right">
             <nav class="d-flex main_right_nav justify-content-between">
-                <div class="d-flex justify-content-around main_right_wrapper_1 pt-3">
+                <div class="d-flex justify-content-around align-items-center m-sm-0 w-50 main_right_wrapper_1 pt-3 m-4">
                     <div>Teams</div>
                     <div>U23</div>
                     <div>U19</div>
                 </div>
                 <div class="mx-5 pt-2">
                     <div class="d-flex">
+
                         <div class="hr mx-3"></div>
                         <img class="user" src="./assets/ben-parker-OhKElOkQ3RE-unsplash (1).png" alt="">
                     </div>
@@ -431,7 +432,7 @@
                                         - <section class="task_modify  p-3 m-3" id="arrow_up">
                                         <div class="d-flex  justify-content-between">
                                             <div>${fetchtask[i].shedulename}
-                                                <div style="color: gray;">${fetchtask[i].weeks} | 12 Sessions</div>
+                                                <div style="color: gray;">${fetchtask[i].weeks} weeks| 12 Sessions</div>
                                                 </div>
                                                 
                                                 
@@ -470,13 +471,14 @@
                                                                 </div>
                                                                 <br>
                                                                 <div class="day sevendays    ">
-                                                                    <div class="day_btn day_btn_1  py-3 px-3 "><input class="inp" type="radio"><span class="days">sunday</span></div>
-                                                                    <div class="day_btn day_btn_2  py-3 px-3 "><input class="inp" type="radio"><span class="days">monday</span></div>
-                                                                    <div class="day_btn day_btn_3  py-3 px-3 "><input class="inp" type="radio"><span class="days">tuesday</span></div>
-                                                                    <div class="day_btn day_btn_4  py-3 px-3 "><input class="inp" type="radio"><span class="days">wednesday</span></div>
-                                                                    <div class="day_btn day_btn_5  py-3 px-3 "><input class="inp" type="radio"><span class="days">thursday</span></div>
-                                                                    <div class="day_btn day_btn_6  py-3 px-3 "><input class="inp" type="radio"><span class="days">friday</span></div>
-                                                                    <div class="day_btn day_btn_7  py-3 px-3 "><input class="inp" type="radio"><span class="days">saturday</span></div>
+                                                                    <div class="day_btn day_btn_1  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">sunday</span></div>
+                                                                    <div class="day_btn day_btn_2  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">monday</span></div>
+                                                                    <div class="day_btn day_btn_3  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">tuesday</span></div>
+                                                                    <div class="day_btn day_btn_4  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">wednesday</span></div>
+                                                                    <div class="day_btn day_btn_5  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">thursday</span></div>
+                                                                    <div class="day_btn day_btn_6  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">friday</span></div>
+                                                                    <div class="day_btn day_btn_7  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">saturday</span></div>
+
                                                                     </div>
                                                                     </div>
                                                                     </section>        `;
