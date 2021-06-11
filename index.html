@@ -131,11 +131,6 @@
             padding: 0 0.1rem;
         }
         
-        .day_btn:hover {
-            color: rgb(0, 155, 21);
-            border: 1px solid rgb(0, 165, 27);
-        }
-        
         .sevendays {
             display: flex;
             justify-content: space-around;
@@ -153,13 +148,29 @@
             box-shadow: 0px 0px 1px gray;
         }
         
-        input[type="radio"]:checked {
-            color: rgb(0, 155, 21);
-            border: 1px solid rgb(0, 165, 27);
-        }
-        
         #searchbar {
             width: 25%;
+        }
+        
+        .btn_close {
+            width: 45%;
+            border-radius: 0.3rem;
+        }
+        
+        .btn_create {
+            width: 45%;
+        }
+        
+        select {
+            color: green;
+            background-color: white;
+        }
+        
+        select option {
+            margin: 40px;
+            background: rgba(255, 243, 243, 0.3);
+            color: rgb(9, 255, 0);
+            text-shadow: 0 1px 0 rgba(182, 182, 182, 0.4);
         }
         
         @media (max-width:1405px) {
@@ -194,6 +205,14 @@
             }
             #searchbar {
                 width: 35%;
+            }
+            .modal-content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .modal_date {
+                display: flex;
+                flex-direction: column;
             }
         }
         
@@ -239,7 +258,7 @@
             }
             .update_btn {
                 width: 70%;
-                margin: auto;
+                margin: 0.2rem auto;
             }
             .date {
                 width: 100%;
@@ -283,6 +302,8 @@
                         <select name="Team Name" id="" class="form-control">
                             <option value="" class="text-success">Team Name
                             </option>
+                            <option value="" class="">Team Name</option>
+                            <option value="" class="">Team Name</option>
                             <option value="" class="">Team Name</option>
                         </select>
                     </div>
@@ -362,7 +383,7 @@
                         <div>Shedule Name</div>
                         <input type="text" placeholder="Enter name" class="form-control" id="shedulename">
                     </div>
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between modal_date">
                         <div class="">
                             <div>Start Date</div>
                             <input class="form-control modal_date" type="date" id="sdate">
@@ -373,13 +394,13 @@
                         </div>
                         <div>
                             <div>Enter No. of weeks</div>
-                            <input class="form-control modal_date" type="text" placeholder="Enter No. of weeks" id="weeks">
+                            <input class="form-control modal_date" type="text" placeholder="Enter weeks" id="weeks">
                         </div>
                     </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btn-block " data-bs-dismiss="modal" id="close">Close</button>
-                        <button type="button" class="btn btn-success btn-block " id="create">Create</button>
+                    <br>
+                    <div class="modal-footer d-flex justify-content-around">
+                        <button type="button" class="btn btn_close" data-bs-dismiss="modal" id="close" style="background-color: rgba(139, 139, 139, 0.301);box-shadow: none;">Close</button>
+                        <button type="button" class="btn btn-success btn_create" id="create">Create</button>
                     </div>
                 </div>
             </div>
