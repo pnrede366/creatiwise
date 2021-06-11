@@ -234,6 +234,16 @@
             #searchbar {
                 width: 70%;
             }
+            .shedule_date {
+                flex-direction: column;
+            }
+            .update_btn {
+                width: 70%;
+                margin: auto;
+            }
+            .date {
+                width: 100%;
+            }
         }
         
         .none {
@@ -471,22 +481,22 @@
                                                             aria-labelledby="flush-headingOne_${i}"
                                                           data-mdb-parent="#accordionFlushExample_${i}">
                                         <section id="task_deatails">
-                                                <div class="bg-light d-flex flex-column p-3 m-3">
-                                                <div class=" date d-flex justify-content-between ">
-                                                    <div class=" d-flex">
+                                            <div class="bg-light d-flex flex-column p-3 m-3">
+                                                <div class=" date d-flex justify-content-between shedule_date">
+                                                    <div class=" d-flex date">
                                                         <div class="">
                                                             <div class="date_wrapper">Start Date</div>
                                                             <div class="date_wrapper_2">${fetchtask[i].sdate}</div>
-                                                            </div>
+                                                        </div>
                                                             <div class="mx-5">
                                                                 <div class="date_wrapper">End Date</div>
                                                                 <div class="date_wrapper_2">${fetchtask[i].edate}</div>
-                                                                </div>
-                                                                </div>
-                                                                <a href="" class="update_btn px-5 p-1 mt-3"> Update</a>
-                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                            <a href="" class="update_btn px-5 p-1 mt-3 update_btn"> Update</a>
+                                                </div>
                                                                 <br>
-                                                                <div class="day sevendays    ">
+                                                        <div class="day sevendays ">
                                                                     <div class="day_btn day_btn_1  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">sunday</span></div>
                                                                     <div class="day_btn day_btn_2  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">monday</span></div>
                                                                     <div class="day_btn day_btn_3  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">tuesday</span></div>
@@ -495,9 +505,9 @@
                                                                     <div class="day_btn day_btn_6  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">friday</span></div>
                                                                     <div class="day_btn day_btn_7  py-3 px-3 "><input class="inp radio-circle " type="radio"><span class="days">saturday</span></div>
 
-                                                                    </div>
-                                                                    </div>
-                                                                    </section>        `;
+                                                         </div>
+                                                </div>
+                                        </section>        `;
 
                     document.getElementById("xx").innerHTML += str;
                     i++;
