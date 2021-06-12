@@ -140,6 +140,10 @@
             font-family: FontAwesome;
         }
         
+        input[type="date"]::placeholder {
+            color: green;
+        }
+        
         input {
             border: 1px solid rgb(206, 205, 205);
         }
@@ -394,7 +398,8 @@
                         </div>
                         <div>
                             <div>Enter No. of weeks</div>
-                            <input class="form-control modal_date" type="text" placeholder="Enter weeks" id="weeks">
+                            <input class="form-control modal_date is-valid" type="text" placeholder="Enter weeks" id="weeks">
+                            <div class="valid-feedback">ok</div>
                         </div>
                     </div>
                     <br>
@@ -430,20 +435,26 @@
                         weeks,
                         shedulename
                     }
+
                     console.log(obj);
-                    arr.push(obj);
-                    if (olddata !== null) {
-                        let result = olddata.concat(arr);
+                    console.log(`${weeks}`);
+                    if ((sdate && edate && weeks && shedulename) !== null && (sdate && edate && weeks && shedulename) !== "") {
+                        arr.push(obj);
+                        if (olddata !== null) {
+                            let result = olddata.concat(arr);
 
 
-                        localStorage.setItem(`task_details`, JSON.stringify(result));
-                        console.log("NO DATA IN LOCAL STORAGE");
+                            localStorage.setItem(`task_details`, JSON.stringify(result));
+                            console.log("NO DATA IN LOCAL STORAGE");
+                        } else {
+
+
+                            console.log(" DATA IN LOCAL STORAGE");
+                            localStorage.setItem(`task_details`, JSON.stringify(arr));
+
+                        }
                     } else {
-
-
-                        console.log(" DATA IN LOCAL STORAGE");
-                        localStorage.setItem(`task_details`, JSON.stringify(arr));
-
+                        alert("please enter value");
                     }
                     display();
                     // }
