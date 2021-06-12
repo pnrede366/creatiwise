@@ -399,13 +399,16 @@
                         <div>
                             <div>Enter No. of weeks</div>
                             <input class="form-control modal_date" type="text" placeholder="Enter weeks" id="weeks">
-                            
+
                         </div>
                     </div>
                     <br>
                     <div class="modal-footer d-flex justify-content-around">
                         <button type="button" class="btn btn_close" data-bs-dismiss="modal" id="close" style="background-color: rgba(139, 139, 139, 0.301);box-shadow: none;">Close</button>
                         <button type="button" class="btn btn-success btn_create" id="create">Create</button>
+                    </div>
+                    <div>
+                        <span class="text-success" id="added"></span>
                     </div>
                 </div>
             </div>
@@ -419,10 +422,8 @@
         $(document).ready(
 
             function() {
-                console.log(create);
                 $("#toggler").click(function() {
                     $(".main_left_list").toggleClass("none");
-                    console.log($(".main_left_list"));
                 })
                 $("#create").click(function() {
                     let sdate = document.getElementById("sdate").value;
@@ -436,8 +437,6 @@
                         shedulename
                     }
 
-                    console.log(obj);
-                    console.log(`${weeks}`);
                     if ((sdate && edate && weeks && shedulename) !== null && (sdate && edate && weeks && shedulename) !== "") {
                         arr.push(obj);
                         if (olddata !== null) {
@@ -445,12 +444,11 @@
 
 
                             localStorage.setItem(`task_details`, JSON.stringify(result));
-                            console.log("NO DATA IN LOCAL STORAGE");
                         } else {
 
 
-                            console.log(" DATA IN LOCAL STORAGE");
                             localStorage.setItem(`task_details`, JSON.stringify(arr));
+
 
                         }
                     } else {
@@ -466,9 +464,7 @@
 
         function display() {
             let fetchtask = JSON.parse(localStorage.getItem('task_details'));
-            console.log("heeloo");
 
-            console.log(olddata);
             if (fetchtask !== null) {
                 let mapval = fetchtask.map(function(val, ind) {
                     return ind;
@@ -543,7 +539,6 @@
 
                     document.getElementById("xx").innerHTML += str;
                     i++;
-                    console.log(i);
                 }
             }
         }
